@@ -31,6 +31,8 @@ public class MacAddressPlugin extends CordovaPlugin {
             JSONObject macAddress = this.getMacAddress();
             if (macAddress != null) {
                 callbackContext.success(macAddress);
+            }else{
+                callbackContext.error("error");
             }
         }
         return false;
